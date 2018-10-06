@@ -8,14 +8,15 @@
     "postinstall": "node ../scripts/examples_postinstall.js node_modules/react-native-explore-youtube"
   },
   "dependencies": {
+    "@babel/runtime": "^7.1.2",
     "react": "16.5.0",
-    "react-native": "0.57.2",
+    "react-native": "0.57.1",
     "react-native-explore-youtube": "file:../"
   },
   "devDependencies": {
     "babel-jest": "23.6.0",
     "jest": "23.6.0",
-    "metro-react-native-babel-preset": "0.48.0",
+    "metro-react-native-babel-preset": "0.47.0",
     "react-test-renderer": "16.5.0"
   },
   "jest": {

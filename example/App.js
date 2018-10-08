@@ -19,10 +19,20 @@ const instructions = Platform.select({
 
 type Props = {};
 export default class App extends Component<Props> {
+  onRegionChange(event) {
+    console.log(event);
+    // Do stuff with event.region.latitude, etc.
+  }
   render() {
+    const region = {
+      latitude: 37.48,
+      longitude: -122.16,
+      latitudeDelta: 0.1,
+      longitudeDelta: 0.1,
+    };
     return (
       <View style={styles.container}>
-        <RNExploreYoutubePlayer style={styles.map} />
+        <RNExploreYoutubePlayer style={styles.map} region={region} zoomEnabled={false} onRegionChange={this.onRegionChange} />
         <Text style={styles.welcome}>Welcome to React Native!</Text>
         <Text style={styles.instructions}>To get started, edit App.js</Text>
         <Text style={styles.instructions}>{instructions}</Text>

@@ -1,9 +1,8 @@
-#if __has_include(<React/RCTBridgeModule.h>)
-#import <React/RCTBridgeModule.h>
-#else
-#import "RCTBridgeModule.h"
-#endif
+@import UIKit;
+#import <React/RCTViewManager.h>
+#import <MapKit/MapKit.h>
 
-@interface RNExploreYoutubeManager : NSObject <RCTBridgeModule>
-
+@interface RNExploreYoutubeManager : RCTViewManager <MKMapViewDelegate>
+@property (nonatomic, weak) IBOutlet UIView *videoContainerView;
+@property (nonatomic, weak) UIView *view;
 @end

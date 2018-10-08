@@ -1,13 +1,13 @@
+#import "RNExploreYoutubeManager.h"
 #import <MapKit/MapKit.h>
 #import <React/RCTViewManager.h>
 
 #import "RNTMapView.h"
 #import "RCTConvert+Mapkit.h"
-//#import <XCDYouTubeKit/XCDYouTubeKit.h>
+#import <XCDYouTubeKit/XCDYouTubeKit.h>
 
-@interface RNExploreYoutubeManager : RCTViewManager <MKMapViewDelegate>
-/*@property (nonatomic, strong) XCDYouTubeVideoPlayerViewController *videoPlayerViewController;
-@property (nonatomic, weak) IBOutlet UIView *videoContainerView;*/
+@interface RNExploreYoutubeManager ()
+@property (nonatomic, strong) XCDYouTubeVideoPlayerViewController *videoPlayerViewController;
 @end
 
 @implementation RNExploreYoutubeManager
@@ -24,11 +24,33 @@ RCT_CUSTOM_VIEW_PROPERTY(region, MKCoordinateRegion, MKMapView)
 
 - (UIView *)view
 {
-/*    self.videoPlayerViewController = [[XCDYouTubeVideoPlayerViewController alloc] initWithVideoIdentifier:@"9bZkp7q19f0"];
+    if (_view == nil) {
+        /*XCDYouTubeVideoPlayerViewController *movieController = [[XCDYouTubeVideoPlayerViewController alloc] initWithVideoIdentifier:@"9bZkp7q19f0"];
+        movieController.view.frame = CGRectMake(10, 10, 300, 300);
+        UIView *viewWrap = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 300, 300)];
+        [movieController presentInView:viewWrap];
+        [self.view addSubview:viewWrap];
+        [movieController.moviePlayer play];
+        _view = viewWrap;*/
+        
+        
+        self.videoPlayerViewController = [[XCDYouTubeVideoPlayerViewController alloc] initWithVideoIdentifier:@"9bZkp7q19f0"];
+        self.videoPlayerViewController.view.contentMode = UIViewContentModeTopLeft;
+        self.videoPlayerViewController.view.frame = CGRectMake(10, 10, 300, 300);
+        UIView *v = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 300, 300)];
+        v.contentMode = UIViewContentModeTopLeft;
+        [self.videoPlayerViewController presentInView:v];
+        [self.videoPlayerViewController.moviePlayer play];
+        _view = v;
+    }
+    
+    return _view;
+    [self.videoContainerView.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
+    self.videoPlayerViewController = [[XCDYouTubeVideoPlayerViewController alloc] initWithVideoIdentifier:@"9bZkp7q19f0"];
     [self.videoPlayerViewController presentInView:self.videoContainerView];
     [self.videoPlayerViewController.moviePlayer play];
 
-    return self.videoContainerView;*/
+    return self.videoContainerView;
     RNTMapView *map = [RNTMapView new];
     map.delegate = self;
     return map;

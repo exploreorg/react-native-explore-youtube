@@ -7,9 +7,36 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		53456828216B110D00A6ECBD /* RNTMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 53456825216B110D00A6ECBD /* RNTMapView.m */; };
+		53456824216B10CA00A6ECBD /* RNTMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 53456822216B10CA00A6ECBD /* RNTMapView.m */; };
+		53456848216B1A4B00A6ECBD /* RCTConvert+Mapkit.h in Sources */ = {isa = PBXBuildFile; fileRef = 53456823216B10CA00A6ECBD /* RCTConvert+Mapkit.h */; };
+		53456849216B1A5600A6ECBD /* libXCDYouTubeKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 53456843216B1A1B00A6ECBD /* libXCDYouTubeKit.a */; };
+		5345684A216B1A5600A6ECBD /* XCDYouTubeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53456845216B1A1B00A6ECBD /* XCDYouTubeKit.framework */; };
 		B3E7B58A1CC2AC0600A0062D /* RNExploreYoutubeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E7B5891CC2AC0600A0062D /* RNExploreYoutubeManager.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		53456842216B1A1B00A6ECBD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5345683C216B1A1B00A6ECBD /* XCDYouTubeKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C2A3F2CD17F4827800AC1C3B;
+			remoteInfo = "XCDYouTubeKit Static Library";
+		};
+		53456844216B1A1B00A6ECBD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5345683C216B1A1B00A6ECBD /* XCDYouTubeKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C2F0E5731944F10E00D8EBA8;
+			remoteInfo = "XCDYouTubeKit Framework";
+		};
+		53456846216B1A1B00A6ECBD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5345683C216B1A1B00A6ECBD /* XCDYouTubeKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C20F579B18817D5400EDBFB0;
+			remoteInfo = "XCDYouTubeKit Tests";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		58B511D91A9E6C8500147676 /* CopyFiles */ = {
@@ -25,9 +52,10 @@
 
 /* Begin PBXFileReference section */
 		134814201AA4EA6300B7C361 /* libRNExploreYoutube.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRNExploreYoutube.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		53456825216B110D00A6ECBD /* RNTMapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNTMapView.m; sourceTree = "<group>"; };
-		53456826216B110D00A6ECBD /* RCTConvert+Mapkit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RCTConvert+Mapkit.h"; sourceTree = "<group>"; };
-		53456827216B110D00A6ECBD /* RNTMapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNTMapView.h; sourceTree = "<group>"; };
+		53456821216B10CA00A6ECBD /* RNTMapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNTMapView.h; sourceTree = "<group>"; };
+		53456822216B10CA00A6ECBD /* RNTMapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNTMapView.m; sourceTree = "<group>"; };
+		53456823216B10CA00A6ECBD /* RCTConvert+Mapkit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RCTConvert+Mapkit.h"; sourceTree = "<group>"; };
+		5345683C216B1A1B00A6ECBD /* XCDYouTubeKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = XCDYouTubeKit.xcodeproj; path = libs/XCDYouTubeKit.xcodeproj; sourceTree = "<group>"; };
 		B3E7B5881CC2AC0600A0062D /* RNExploreYoutubeManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNExploreYoutubeManager.h; sourceTree = "<group>"; };
 		B3E7B5891CC2AC0600A0062D /* RNExploreYoutubeManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNExploreYoutubeManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -37,6 +65,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				53456849216B1A5600A6ECBD /* libXCDYouTubeKit.a in Frameworks */,
+				5345684A216B1A5600A6ECBD /* XCDYouTubeKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,15 +81,34 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		5345682B216B182E00A6ECBD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5345683D216B1A1B00A6ECBD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				53456843216B1A1B00A6ECBD /* libXCDYouTubeKit.a */,
+				53456845216B1A1B00A6ECBD /* XCDYouTubeKit.framework */,
+				53456847216B1A1B00A6ECBD /* XCDYouTubeKit.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		58B511D21A9E6C8500147676 = {
 			isa = PBXGroup;
 			children = (
-				53456826216B110D00A6ECBD /* RCTConvert+Mapkit.h */,
-				53456827216B110D00A6ECBD /* RNTMapView.h */,
-				53456825216B110D00A6ECBD /* RNTMapView.m */,
+				5345683C216B1A1B00A6ECBD /* XCDYouTubeKit.xcodeproj */,
+				53456823216B10CA00A6ECBD /* RCTConvert+Mapkit.h */,
+				53456821216B10CA00A6ECBD /* RNTMapView.h */,
+				53456822216B10CA00A6ECBD /* RNTMapView.m */,
 				B3E7B5881CC2AC0600A0062D /* RNExploreYoutubeManager.h */,
 				B3E7B5891CC2AC0600A0062D /* RNExploreYoutubeManager.m */,
 				134814211AA4EA7D00B7C361 /* Products */,
+				5345682B216B182E00A6ECBD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -107,6 +156,12 @@
 			mainGroup = 58B511D21A9E6C8500147676;
 			productRefGroup = 58B511D21A9E6C8500147676;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 5345683D216B1A1B00A6ECBD /* Products */;
+					ProjectRef = 5345683C216B1A1B00A6ECBD /* XCDYouTubeKit.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				58B511DA1A9E6C8500147676 /* RNExploreYoutube */,
@@ -114,12 +169,37 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXReferenceProxy section */
+		53456843216B1A1B00A6ECBD /* libXCDYouTubeKit.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libXCDYouTubeKit.a;
+			remoteRef = 53456842216B1A1B00A6ECBD /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		53456845216B1A1B00A6ECBD /* XCDYouTubeKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = XCDYouTubeKit.framework;
+			remoteRef = 53456844216B1A1B00A6ECBD /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		53456847216B1A1B00A6ECBD /* XCDYouTubeKit.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = XCDYouTubeKit.xctest;
+			remoteRef = 53456846216B1A1B00A6ECBD /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
 /* Begin PBXSourcesBuildPhase section */
 		58B511D71A9E6C8500147676 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				53456828216B110D00A6ECBD /* RNTMapView.m in Sources */,
+				53456848216B1A4B00A6ECBD /* RCTConvert+Mapkit.h in Sources */,
+				53456824216B10CA00A6ECBD /* RNTMapView.m in Sources */,
 				B3E7B58A1CC2AC0600A0062D /* RNExploreYoutubeManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

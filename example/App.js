@@ -31,8 +31,17 @@ export default class App extends Component<Props> {
       longitudeDelta: 0.1,
     };
     return (
+      <View style={{flex: 1}}>
+        <View style={{flex: 1, backgroundColor: 'powderblue'}} />
+        <RNExploreYoutubePlayer style={{flex: 2, backgroundColor: 'skyblue'}} />
+        <View style={{flex: 3, backgroundColor: 'steelblue'}} />
+      </View>
+    );
+    return (
       <View style={styles.container}>
+        <View style={styles.container}>
         <RNExploreYoutubePlayer style={styles.map} region={region} zoomEnabled={false} onRegionChange={this.onRegionChange} />
+        </View>
         <Text style={styles.welcome}>Welcome to React Native!</Text>
         <Text style={styles.instructions}>To get started, edit App.js</Text>
         <Text style={styles.instructions}>{instructions}</Text>
@@ -59,7 +68,12 @@ const styles = StyleSheet.create({
     marginBottom: 5,
   },
   map: {
-    width: '100%',
-    height: 100,
+    width: 300,
+    height: 300,
+    backgroundColor: '#FF0000',
+    borderRadius: 4,
+    borderWidth: 0.5,
+    borderColor: '#d6d7da',
+    flex:1,
   }
 });

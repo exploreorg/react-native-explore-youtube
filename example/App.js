@@ -33,7 +33,7 @@ export default class App extends Component<Props> {
     return (
       <View style={{flex: 1}}>
         <View style={{flex: 1, backgroundColor: 'powderblue'}} />
-        <RNExploreYoutubePlayer style={{flex: 2, backgroundColor: 'skyblue'}} />
+        <RNExploreYoutubePlayer identifier="eIslG97oQns" style={{flex: 2, backgroundColor: 'skyblue'}} />
         <View style={{flex: 3, backgroundColor: 'steelblue'}} />
       </View>
     );

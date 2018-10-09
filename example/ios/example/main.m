@@ -9,8 +9,11 @@
 
 #import "AppDelegate.h"
 
+extern void WorkaroundInlinePlayerFullScreenButtonBug(void);
+
 int main(int argc, char * argv[]) {
   @autoreleasepool {
+    WorkaroundInlinePlayerFullScreenButtonBug();
     return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
   }
 }

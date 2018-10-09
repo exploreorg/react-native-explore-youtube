@@ -48,6 +48,11 @@ NSString *const RNExploreVideoEndEvent = @"exploreorg_youtubeplayer_videoEnd";
                                                                            }];
 }
 
+- (void)toggleFullscreen
+{
+    [_moviePlayer.moviePlayer setFullscreen:YES];
+}
+
 #pragma mark - React View Management
 
 - (void)insertReactSubview:(UIView *)subview atIndex:(NSInteger)atIndex

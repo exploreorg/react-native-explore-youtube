@@ -17,19 +17,8 @@ const instructions = Platform.select({
     'Shake or press menu button for dev menu',
 });
 
-type Props = {};
-export default class App extends Component<Props> {
-  onRegionChange(event) {
-    console.log(event);
-    // Do stuff with event.region.latitude, etc.
-  }
+export default class App extends Component{
   render() {
-    const region = {
-      latitude: 37.48,
-      longitude: -122.16,
-      latitudeDelta: 0.1,
-      longitudeDelta: 0.1,
-    };
     return (
       <View style={{flex: 1}}>
         <View style={{flex: 1, backgroundColor: 'powderblue'}} />
@@ -37,16 +26,6 @@ export default class App extends Component<Props> {
         <View style={{flex: 3, backgroundColor: 'steelblue'}}>
           <Button onPress={() => this.player.toggleFullscreen()} title="Press" style={{ flex: 1}} />
         </View>
-      </View>
-    );
-    return (
-      <View style={styles.container}>
-        <View style={styles.container}>
-        <RNExploreYoutubePlayer style={styles.map} region={region} zoomEnabled={false} onRegionChange={this.onRegionChange} />
-        </View>
-        <Text style={styles.welcome}>Welcome to React Native!</Text>
-        <Text style={styles.instructions}>To get started, edit App.js</Text>
-        <Text style={styles.instructions}>{instructions}</Text>
       </View>
     );
   }

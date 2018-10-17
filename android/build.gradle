@@ -1,12 +1,13 @@
 buildscript {
     repositories {
         jcenter()
+        google()
     }
 
     dependencies {
         // Matches the RN Hello World template
         // https://github.com/facebook/react-native/blob/1e8f3b11027fe0a7514b4fc97d0798d3c64bc895/local-cli/templates/HelloWorld/android/build.gradle#L8
-        classpath 'com.android.tools.build:gradle:2.2.3'
+        classpath 'com.android.tools.build:gradle:3.1.4'
     }
 }
 
@@ -19,7 +20,7 @@ def safeExtGet(prop, fallback) {
 
 def DEFAULT_COMPILE_SDK_VERSION = 27
 def DEFAULT_BUILD_TOOLS_VERSION = "27.0.3"
-def DEFAULT_MIN_SDK_VERSION = 16
+def DEFAULT_MIN_SDK_VERSION = 17
 def DEFAULT_TARGET_SDK_VERSION = 27
 
 android {
@@ -35,6 +36,10 @@ android {
   lintOptions {
     abortOnError false
   }
+    sourceSets {
+        main.java.srcDirs += 'src/main/java'
+    }
+
 }
 
 repositories {
@@ -45,10 +50,16 @@ repositories {
         url "$projectDir/../node_modules/react-native/android"
     }
     mavenCentral()
+    jcenter()
+    google()
 }
 
 dependencies {
     compile 'com.facebook.react:react-native:+'
+    compile 'com.pierfrancescosoffritti.androidyoutubeplayer:core:8.0.1'
+    compile "android.arch.lifecycle:livedata:1.1.1"
+    compile "android.arch.lifecycle:viewmodel:1.1.1"
+    compile "android.arch.lifecycle:extensions:1.1.1"
 }
 
 def configureReactNativePom(def pom) {

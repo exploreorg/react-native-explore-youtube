@@ -37,6 +37,7 @@ public class RNExploreYoutubeManager extends SimpleViewManager {
     @ReactProp(name = "identifier")
     public void setIdentifier(YouTubePlayerView view, @Nullable final String identifier) {
         Log.d("wtf", "setting id: "+ identifier);
+        view.getPlayerUIController().enableLiveVideoUI(true);
         view.initialize(new YouTubePlayerInitListener() {
             @Override
             public void onInitSuccess(@NonNull final YouTubePlayer initializedYouTubePlayer) {
